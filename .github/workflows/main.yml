@@ -24,8 +24,8 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Restart schort service
-      run: systemctl restart schort
+      run: sudo systemctl restart schort
 
     # Runs a set of commands using the runners shell
     - name: Restart nginx service
-      run: systemctl restart nginx
+      run: sudo systemctl restart nginx
