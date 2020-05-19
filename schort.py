@@ -32,7 +32,7 @@ def short(shortLink=""):
 					else:
 						return redirect(url, code=301) # Redirect to long URL saved in the database
 			else:
-				return render_template("index.html", name=shortLink, message="Enter long URL for "+ request.url_root + shortLink+":", message_type="info") # Custom link page
+				return render_template("index.html", name=shortLink, message="Enter long URL for "+ "https://" + request.host + "/" +  shortLink +":", message_type="info") # Custom link page
 		else:
 			return render_template("index.html", name=shortLink) # Landing page
 	elif request.method == "POST": # Someone submitted a new link to short
@@ -42,7 +42,7 @@ def short(shortLink=""):
 			abort(400)
 
 		databaseId = insertIdUnique(longUrl, idToCheck=wishId)
-		return request.url_root + databaseId # Short link in plain text
+		return "https://" + request.host + "/" + databaseId  # Short link in plain text
 
 def insertIdUnique(longUrl, idToCheck=None):
 	hashUrl = hashlib.sha256(longUrl.encode()).digest()
@@ -86,6 +86,6 @@ def initDB():
 
 if __name__ == '__main__':
 	initDB()
-	app.run(debug=True) # If you call this file directly it will always run in debug mode. THIS IS VERY DANGEROUS!
+	app.run(debug=False) # If you call this file directly it will always run in debug mode. THIS IS VERY DANGEROUS!
 
 # vim: noexpandtab:ts=2:sw=2:sts=2

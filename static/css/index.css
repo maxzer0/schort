@@ -8,7 +8,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: monospace;
+	font-family: 'Tahoma', monospace;
+	background-color: #002171;
+	color: white;
 }
 
 #main {
@@ -103,7 +105,7 @@ a:hover * {
 }
 
 span .description {
-	color: black;
+	color: white;
 	display: none;
 	opacity: 0;
 	text-align: left;
@@ -120,7 +122,7 @@ a:focus .description {
 	position: absolute;
 	display: inline;
 	opacity: 1;
-	background-color: white;
+	background-color: black;
 	pointer-events: auto;
 }
 
@@ -146,23 +148,23 @@ ol, ul {
 .description {
 	background:
 		/* Shadow covers */
-		linear-gradient(white 30%, rgba(255,255,255,0)),
-		linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+		linear-gradient(black 30%, rgba(0,0,0,0)),
+		linear-gradient(rgba(0,0,0,0), black 70%) 0 100%,
 	
 		/* Shadows */
-		radial-gradient(50% 0, farthest-side, rgba(0,0,0,.3), rgba(0,0,0,0)),
-		radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.3), rgba(0,0,0,0)) 0 100%;
+		radial-gradient(50% 0, farthest-side, rgba(255,255,255,.3), rgba(255,255,255,0)),
+		radial-gradient(50% 100%,farthest-side, rgba(255,255,255,.3), rgba(255,255,255,0)) 0 100%;
 
 	background:
 		/* Shadow covers */
-		linear-gradient(white 30%, rgba(255,255,255,0)),
-		linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+		linear-gradient(black 30%, rgba(0,0,0,0)),
+		linear-gradient(rgba(0,0,0,0), black 70%) 0 100%,
 		
 		/* Shadows */
-		radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.3), rgba(0,0,0,0)),
-		radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.3), rgba(0,0,0,0)) 0 100%;
+		radial-gradient(farthest-side at 50% 0, rgba(255,255,255,.3), rgba(255,255,255,0)),
+		radial-gradient(farthest-side at 50% 100%, rgba(255,255,255,.3), rgba(255,255,255,0)) 0 100%;
 	background-repeat: no-repeat;
-	background-color: white;
+	background-color: black;
 	background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
 	
 	background-attachment: local, local, scroll, scroll;
