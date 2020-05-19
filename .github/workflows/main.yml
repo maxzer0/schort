@@ -21,6 +21,9 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: maxzer0/schort
+        
+    - name: Copy the checked out repository #no idea how to / lazy to change the pathing also this is a locally run project w/e
+      run: cp /opt/actions-runner/_work/schort/schort/* /opt/schort/ -Rf
 
     # Runs a single command using the runners shell
     - name: Restart schort service
