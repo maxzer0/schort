@@ -18,3 +18,7 @@
 The schort.wsgi file can be set as UWSGI_PROGRAM if you use uWSGI.
 Keep in mind, that the UWSGI_DIR needs to be set to the path where schort.py resists.
 This is because schort is not installed in a global scope. Since schort.wsgi imports schort.py it needs his workspace in the same folder.
+
+## Todo (maxzr0)
+- [ ] transform into kubernetes
+- [ ] proper reverse proxy / https support 
